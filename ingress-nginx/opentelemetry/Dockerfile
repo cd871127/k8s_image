@@ -1,0 +1,2 @@
+FROM registry.k8s.io/ingress-nginx/opentelemetry:v20230721-3e2062ee5@sha256:13bee3f5223883d3ca62fee7309ad02d22ec00ff0d7033e3e9aca7a9f60fd472
+MAINTAINER Anthony cdistc@163.com
