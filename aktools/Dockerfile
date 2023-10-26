@@ -2,12 +2,12 @@
 FROM python:3.11-slim-bullseye
 
 # 升级 pip 到最新版
-RUN pip install --upgrade pip -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host=mirrors.aliyun.com
+RUN pip install --upgrade pip
 
 # 新增 gunicorn 安装，提升并发和并行能力
-RUN pip install --no-cache-dir akshare fastapi uvicorn gunicorn -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host=mirrors.aliyun.com  --upgrade
+RUN pip install --no-cache-dir akshare fastapi uvicorn gunicorn --upgrade
 #RUN pip install --no-cache-dir akshare fastapi uvicorn gunicorn -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host=mirrors.aliyun.com  --upgrade
-RUN pip install --no-cache-dir aktools -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host=mirrors.aliyun.com --upgrade
+RUN pip install --no-cache-dir aktools --upgrade
 #RUN pip install --no-cache-dir aktools -i https://pypi.org/simple --upgrade
 
 # 设置工作目录方便启动
