@@ -1,0 +1,2 @@
+FROM openjdk:17
+MAINTAINER Anthony cdistc@163.com
