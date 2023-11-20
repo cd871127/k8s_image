@@ -15,4 +15,4 @@ RUN apt update && apt install ca-certificates unzip && apt clean all && wget htt
     unzip Xray-linux-64.zip \
 COPY --from=xraysub /root/xraysub/xraysub .
 
-EXPOSE 1080,1081
+EXPOSE 1080 1081
