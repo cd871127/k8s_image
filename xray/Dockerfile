@@ -11,8 +11,9 @@ MAINTAINER Anthony cdistc@163.com
 
 WORKDIR /root
 
-RUN apt update && apt install ca-certificates unzip && apt clean all && wget https://github.com/XTLS/Xray-core/releases/download/v1.8.6/Xray-linux-64.zip && \
-    unzip Xray-linux-64.zip \
 COPY --from=xraysub /root/xraysub/xraysub .
+
+RUN apt update && apt install -y ca-certificates unzip && apt clean all && wget https://github.com/XTLS/Xray-core/releases/download/v1.8.6/Xray-linux-64.zip && \
+    unzip Xray-linux-64.zip
 
 EXPOSE 1080 1081
