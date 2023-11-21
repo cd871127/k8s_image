@@ -1,4 +1,4 @@
-FROM debian:bookworm-slim
+FROM debian:bulleye-slim
 MAINTAINER Anthony cdistc@163.com
 
 WORKDIR /root
