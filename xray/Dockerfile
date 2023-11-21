@@ -1,4 +1,4 @@
-FROM debian:bulleye-slim
+FROM debian:bullseye-slim
 MAINTAINER Anthony cdistc@163.com
 
 WORKDIR /root
