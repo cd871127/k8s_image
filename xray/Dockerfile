@@ -3,8 +3,7 @@ MAINTAINER Anthony cdistc@163.com
 
 WORKDIR /root
 
-RUN git clone https://github.com/ifrit2000/xraysub.git && \
-    cd xraysub && go build
+RUN git clone https://github.com/ifrit2000/xraysub.git && cd xraysub && go build
 
 FROM debian:bookworm
 MAINTAINER Anthony cdistc@163.com
