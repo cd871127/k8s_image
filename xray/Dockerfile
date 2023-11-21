@@ -5,7 +5,6 @@ WORKDIR /root
 
 COPY xraysub .
 
-RUN apt update && apt install -y ca-certificates unzip && apt clean all && wget https://github.com/XTLS/Xray-core/releases/download/v1.8.6/Xray-linux-64.zip && \
-    unzip Xray-linux-64.zip
+RUN sed -i 's/mirrors.tuna.tsinghua.edu.cn/deb.debian.org/g' /etc/apt/sources.list.d/debian.sources && apt update && apt install -y ca-certificates unzip && apt clean all && unzip Xray-linux-64.zip && chmod +x xraysub && chmod +x xray
 
 EXPOSE 1080 1081
